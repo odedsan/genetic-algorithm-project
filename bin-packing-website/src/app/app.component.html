@@ -1,0 +1,91 @@
+<div class="header">
+
+  <h1 style="font-size: 60px; font-family: Lucida Console, Courier New, monospace; font-weight: 600; margin-top: 20px;"> The Bin Packing Website</h1>
+  <p style="font-size: 20px;">Welcome to The Bin Packing Website, in this website we are going to explore the bin packing problem</p>
+  <p style="font-size: 20px;">and known algorithms for solving the problem. In addition, we will also use a genetic algorithm, </p>
+  <p style="font-size: 20px;"> and we will compare its results and its running time to the known algorithms for solving the problem</p>
+</div>
+
+<div class="forms-container">
+
+
+  <h2>Size Of Bin:</h2>
+  <div class="input-container">
+    <mat-form-field>
+      <mat-label>Input</mat-label>
+      <input matInput id="binSizeInputField" [disabled]="isRandomBinSize">
+    </mat-form-field>
+    
+    <mat-radio-group (change)="binSizeRandom($event)">
+      <mat-radio-button value="1" [checked] = "true">give an Input</mat-radio-button>
+      <mat-radio-button value="2">random</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  
+
+  <h2>Amount Of Weights:</h2>
+  <div class="input-container">
+  <mat-form-field>
+    <mat-label>Input</mat-label>
+    <input matInput id = "numberOfObjInputField" [disabled]="isRandomNumOfObj">
+  </mat-form-field>
+  
+  <mat-radio-group (change)="numbeOfObjectsRandom($event)">
+    <mat-radio-button value="1" [checked] = "true">give an Input</mat-radio-button>
+    <mat-radio-button value="2">random</mat-radio-button>
+  </mat-radio-group>
+  </div>
+  
+  <h2>The number of generations the genetic algorithm will run:</h2>
+  <div class="input-container">
+    <mat-form-field>
+      <mat-label>Input</mat-label>
+      <input matInput id="numberOfGenInputField" [disabled]="isRandomNumOfGen" >
+    </mat-form-field>
+    
+    <mat-radio-group (change)="numberOfGenerationsRandom($event)">
+      <mat-radio-button value="1" [checked] = "true">give an Input</mat-radio-button>
+      <mat-radio-button value="2">random</mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+</div>
+
+<button mat-raised-button color="primary" class="solve-button" (click)="onButtonClick()">Solve Bin-Packing Problem</button>
+
+<div class="data-container">
+  <div style="font-size: 25px; font-weight: 500;">The weights are: {{weights}}</div>
+
+  <div style="font-size: 25px; font-weight: 500;">The bin size is: {{binSize}}</div>
+</div>
+
+<div *ngIf="(GARunningTime !== '')" class="ga-running-time-container" >
+  <p style="color: #7DF9FF; font-size: 25px; font-weight: 500;">Genetic Algorithm {{GARunningTime}}</p>
+  <div>(Genetic algorithm running time is to high, so it doesn't take part in the charts)</div>
+</div>
+
+<div class="charts-container">
+
+  <highcharts-chart
+      [Highcharts] = "highcharts"
+      [options] = "valueChartOptions"
+      [(update)]="updateFlag"
+      style = "width: 50%; height: 400px;"
+  >
+
+  </highcharts-chart>
+
+  <highcharts-chart
+      [Highcharts] = "highcharts"
+      [options] = "runningTimeChartOptions"
+      [(update)]="updateFlag"
+      style = "width: 50%; height: 400px;"
+  >
+
+  </highcharts-chart>
+
+</div>
+  
+
+
+

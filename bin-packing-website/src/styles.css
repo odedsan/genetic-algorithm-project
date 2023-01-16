@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #87CEEB;
+    flex-direction: column;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+
+}
+
+.title{
+    font-size: 80px;
+    font-family: "Monaco", Monospace;
+}
+
+.ga-running-time-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-right: 60px;
+    flex-direction: column;
+    margin: 20px;
+}
+
+
+
+
+.data-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    gap: 15px;
+
+
+}
+
+.forms-container{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 40px;
+    }
+
+.input-container{
+    display: flex;
+    justify-content: flex-start;
+    }
+
+.solve-button{
+    margin-left: 50px;
+    width: 250px;
+    }
+
+    .charts-container{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        
+    }
