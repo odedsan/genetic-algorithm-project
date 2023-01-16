@@ -1,6 +1,6 @@
 # genetic-algorithm-project
 
-for running the project you need to run the server and afterwards to run the website itself.
+for running the project you need to run the server and afterwards to run the website itself. (to run the project you need to have Node.js version of v14.20 or above)
 
 **for running the server:**
 
