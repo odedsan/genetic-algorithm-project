@@ -14,6 +14,6 @@ for running the project you need to run the server and afterwards to run the web
   4. run ng serve
   5. go to http://localhost:4200
 
-Example of how to run the the project and running exanple can be found at:
+Example of how to run the the project and running exanple of the website can be found at:
 
 https://www.youtube.com/watch?v=cWGbPt49edA
