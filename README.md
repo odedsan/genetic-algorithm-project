@@ -13,3 +13,5 @@ for running the project you need to run the server and afterwards to run the web
   3. run npm install
   4. run ng serve
   5. go to http://localhost:4200
+
+https://www.youtube.com/watch?v=cWGbPt49edA
